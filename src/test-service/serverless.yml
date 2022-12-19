@@ -1,0 +1,35 @@
+service: TestService # Replace with your service name
+frameworkVersion: "3"
+configValidationMode: warn
+package:
+    individually: true
+custom:
+    esbuild:
+        bundle: true
+        minify: true
+        exclude:
+            - aws-sdk
+        packagePath: "../../package.json"
+    stage: "${self:provider.stage}"
+plugins:
+    - serverless-esbuild
+    - serverless-offline
+    - serverless-function-outputs
+provider:
+    name: aws
+    region: eu-west-2
+    stage: "${opt:stage, 'dev'}"
+    runtime: nodejs14.x
+    architecture: arm64
+    versionFunctions: false
+    apiGateway:
+        minimumCompressionSize: 1024
+        shouldStartNameWithService: true
+        description: "API Gateway for ${self:service}."
+    memorySize: 512
+    timeout: 30
+    environment:
+        SERVICE_NAME: "${self:service}"
+        STAGE: "${sls:stage}"
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+functions: ${file(./serverless.functions.yml)}

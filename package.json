@@ -1,0 +1,42 @@
+{
+    "name": "serverless-esbuild-starter",
+    "version": "0.0.1",
+    "scripts": {
+        "test-service": "cd src/test-service && sls offline --stage local --reloadHandler",
+        "test": "cross-env TZ=Europe/London jest --silent --coverage",
+        "lint": "npx eslint -c .eslintrc.js ./src/**/*.ts",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@middy/core": "^3.3.0",
+        "joi": "^17.4.2"
+    },
+    "devDependencies": {
+        "@serverless/compose": "^1.0.0",
+        "@types/aws-lambda": "^8.10.102",
+        "@types/node": "^18.0.0",
+        "@types/serverless": "^1.78.39",
+        "@types/underscore": "^1.11.4",
+        "@types/uuid": "^8.3.1",
+        "@typescript-eslint/eslint-plugin": "^4.31.2",
+        "@typescript-eslint/parser": "^4.31.2",
+        "aws-sdk": "^2.1242.0",
+        "axios": "^0.22.0",
+        "concurrently": "^7.6.0",
+        "esbuild": "^0.15.6",
+        "eslint": "^6.8.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "husky": "^8.0.2",
+        "jsdom": "^19.0.0",
+        "serverless": "^3.25.1",
+        "serverless-esbuild": "^1.33.2",
+        "serverless-function-outputs": "^0.0.1",
+        "serverless-offline": "^9.3.0",
+        "ts-jest": "^26.5.6",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.7.4",
+        "underscore": "^1.13.4",
+        "uuid": "^8.3.2",
+        "yup": "^0.32.9"
+    }
+}

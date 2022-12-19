@@ -1,0 +1,7 @@
+someFunctionName:
+    handler: test.handler
+    events:
+        - http:
+            method: GET
+            path: "/"
+
