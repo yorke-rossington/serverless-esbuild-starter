@@ -1,5 +1,6 @@
 {
     "name": "serverless-esbuild-starter",
+    "author": "Yorke Rossington",
     "version": "0.0.1",
     "scripts": {
         "test-service": "cd src/test-service && sls offline --stage local --reloadHandler",
@@ -23,6 +24,7 @@
         "aws-sdk": "^2.1242.0",
         "axios": "^0.22.0",
         "concurrently": "^7.6.0",
+        "cross-env": "^7.0.3",
         "esbuild": "^0.15.6",
         "eslint": "^6.8.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",

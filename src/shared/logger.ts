@@ -1,3 +1,7 @@
+const successStyle = [
+    'color: green'
+].join(';');
+
 export const logger = {
     success: (message: string): void => {
         console.log(

@@ -1,5 +1,5 @@
 someFunctionName:
-    handler: test.handler
+    handler: src/index.handler
     events:
         - http:
             method: GET
