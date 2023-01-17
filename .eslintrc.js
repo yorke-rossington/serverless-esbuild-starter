@@ -2,19 +2,16 @@ module.exports = {
     root: true,
     ignorePatterns: [],
     env: { node: true },
-    globals: {
-        defineProps: "readonly",
-        withDefaults: "readonly",
-        defineEmits: "readonly"
-    },
     extends: [
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     parser: "",
     "plugins": ["@typescript-eslint", "simple-import-sort"],
     parserOptions: {
         ecmaVersion: 2020,
-        "parser": "@typescript-eslint/parser"
+        "parser": "@typescript-eslint/parser",
+        "sourceType": ""
     },
     rules: {
         "simple-import-sort/imports": "error",
@@ -28,7 +25,7 @@ module.exports = {
         }],
         "object-property-newline": ["error", { allowAllPropertiesOnSameLine: false }],
         "@typescript-eslint/no-explicit-any": "error",
-        semi: ["error", "always"],
+        "semi": ["error", "always"],
         "no-trailing-spaces": "error",
         "comma-dangle": "error",
         "max-len": [

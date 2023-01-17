@@ -1,3 +1,5 @@
+# See https://www.serverless.com/framework/docs/guides/compose
+
 services:
     test-service:
         path: src/test-service

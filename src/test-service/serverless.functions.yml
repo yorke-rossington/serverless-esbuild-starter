@@ -1,7 +1,7 @@
 someFunctionName:
-    handler: src/index.handler
+    handler: handler.lambda
     events:
         - http:
-            method: GET
+            method: "*"
             path: "/"
 

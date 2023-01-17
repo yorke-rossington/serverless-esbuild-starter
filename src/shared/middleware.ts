@@ -10,10 +10,8 @@ export const loggingMiddleware = (): middy.MiddlewareObj<APIGatewayProxyEvent, A
 
     const databaseMiddlewareBefore: middy.MiddlewareFn<APIGatewayProxyEvent, APIGatewayProxyResult> =
         async (request): Promise<void | APIGatewayProxyResult> => {
-                logger.object(request.event);
+            logger.object(request.event);
         };
 
-    return {
-        before: databaseMiddlewareBefore
-    };
+    return { before: databaseMiddlewareBefore };
 };

@@ -45,3 +45,4 @@ coverage
 
 .esbuild
 node_modules
+.serverless
